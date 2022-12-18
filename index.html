@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    
+<style type="text/css">
+    * {
+        box-sizing:border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+
+/* Style the header */
+header {
+    background-color: rgb(85, 81, 81);
+    padding: 30px;
+    text-align: center;
+    font-size:  35px;
+    color: white;
+}
+
+
+/* create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 358px; /* only for demontration, should be removed */
+    background-color: darkgrey;
+    padding: 20px;
+}
+
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    
+}
+
+/* Clear floats after the coloumns */
+
+article {
+    float: left;
+    padding: 20px;
+    width: 60%;
+    height: 358px; 
+        background-image: url("arrow.jpg");
+        background-repeat:no-repeat;
+        background-size: 478px;
+       
+              
+}
+
+p {
+    color: black;
+}
+
+h1 {
+    font-size: 34px;
+
+}
+
+
+
+
+/* Clear floats after the coloumns */
+section::after {
+    content:"";
+    display: table;
+    clear: both;
+
+    
+}
+
+/* Style the footer */
+footer {
+    background-color: rgb(85, 81, 81);
+    padding: 10px; 
+    text-align: center;
+    color: white;
+    
+    
+}
+
+/* Responsive layout - makes the two coloumns / boxes stack on top of eacah other instaed of next to */
+@media (max-width: 600px){
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h2> Olahraga Panahan </h2>
+    </header>
+    
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+     <article>
+        
+        <h1> ARCHERY  </h1>
+        <p><b> <mark>Panahan adalah jenis olahraga yang menggunakan busur dan anak panah untuk sasaran. Target atau sasaran panahan terdiri dari sepuluh lingkaran konsentris, dan poin (skor) diberikan berdasarkan di lingkaran mana busur mendarat </mark></b></p>
+        <p><b> <mark>Untuk melakukan olahraga panahan, perlu menguasai teknik dasarnya. Mulai dari teknik posisi, menempatkan anak panah, memegang busur dan anak panah, hingga melepaskan tembakan.”</mark></b> </p>
+       
+        
+     </article>   
+    </section>
+    <footer>
+        <h4>Footer</h4>
+    </footer>
+</body>
+</html>
